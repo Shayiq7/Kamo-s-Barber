@@ -4,29 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Kamo's Barber</title>
+    <title>Kamo's Barber - Contact</title>
+    <!-- Google Maps API script -->
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAx5a43w_kQTXKEZVo5UXY0whiRpGlD_K4&callback=initMap&libraries=maps,marker&v=beta"></script>
 </head>
 <body>
 
-<div id="navbar">
+<div class="navbar">
     <h1 class="title">Kamo's Barber</h1>
     <nav>
         <ul>
             <li><a href="home.html" title="View home page">Home</a></li>
             <li><a href="services.html" title="View services page">Services</a></li>
             <li><a href="gallery.html" title="View gallery page">Gallery</a></li>
-            <li><a href="reviews.html" title="View reviews page">Reviews</a></li>
             <li><a href="contact.html" title="View contact page">Contact Us</a></li>
         </ul>
     </nav>
 </div>
 
+<div class="black-background">
+    <h1 class="heading_tag">Contact Us</h1>
+</div>
+
 <main>
-    <!-- Main content goes here -->
+    
+    <p style="color: black;">If you have any questions, feel free to reach out to us!</p>
+    <!-- Map Container -->
+    <div id="map-container"></div>
 </main>
 
 <footer>
-    <div class="container">
+    <div class="container_footer">
         <div class="footer-content">
             <p>Address: 148 Greenford Rd, Harrow, HA1 3QP</p>
             <p>Phone: 020 3343 7242</p>
@@ -44,7 +52,8 @@
     </div>
 </footer>
 
-<script src="script.js"></script> <!-- Links this page with JavaScript page -->
+<!-- JavaScript file -->
+<script src="script.js"></script> <!-- Combined JavaScript file -->
 
 </body>
 </html>

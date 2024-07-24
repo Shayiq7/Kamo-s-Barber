@@ -12,63 +12,115 @@ html, body {
 
 html {
     scroll-behavior: smooth;
+}  
+
+main {
+    flex: 1; /* Ensures main content fills remaining space */
+    padding: 20px; /* Add padding to main content */
+    box-sizing: border-box; /* Include padding in width/height calculation */
 }
 
-#navbar {
+h3 {
+    text-align: center;
+    color: #000000;
+    margin-top: 450px;
+}
+
+.review-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px; /* Adjust as needed for spacing between reviews */
+    align-items: center; /* Align items horizontally at the center */
+    margin-top: 40px;
+}
+
+.review {
+    max-width: 600px; /* Limit width to prevent overly long lines */
+    text-align: center; /* Center-align text within reviews */
+    color: #000000;
+}
+
+.review p:first-child {
+    background: linear-gradient(to right, #ffdc48, #ffeb95);
+    -webkit-background-clip: text; background-clip: text;
+    color: transparent;
+}
+
+.review p:last-child {
+    font-weight: bold;
+}
+
+.navbar {
     background-color: #000000; /* Sets background color */
     color: #ffffff; /* Sets text color */
     display: flex; /* Use flexbox for layout */
     justify-content: space-between; /* Space items evenly */
     align-items: center; /* Center items vertically */
-    padding: 0.6rem 1rem; /* Adds padding */
-   
+    z-index: 1000; /* Ensures the navbar stays on top of other elements */
+    position: fixed; /* Fixes the position of the nav bar */
+    top: 0;
+    width: 100%;
+    height: 60px;
 }
 
-#navbar .title {
-
+.navbar .title {
     margin: 0; /* Remove default margin */
     margin-left: 50px;
     background: linear-gradient(to right, #ffdc48, #ffeb95);
-    /* Clip background to text */
     -webkit-background-clip: text; background-clip: text;
     color: transparent;
-
+    margin-top: 17px;
 }
 
-#navbar nav ul {
+.navbar nav ul {
     list-style-type: none; /* Removes default list styles */
     display: flex; /* Use flexbox for layout */
     padding: 0; /* Removes padding */
     margin: 0; /* Removes margin */
-    margin-right: 60px;
-    gap: 13px;
+    margin-right: 110px;
+    gap: 10px;
+    margin-top: 17px;
 }
 
-
-#navbar nav ul li a {
+.navbar nav ul li a {
     color: transparent; /* Make text color transparent */
     text-decoration: none; /* Removes underline */
     font-weight: bold; /* Sets font weight */
-    /* Apply linear gradient background */
     background: linear-gradient(to right, #ffdc48, #ffeb95);
-    /* Clip background to text */
     -webkit-background-clip: text; background-clip: text;
-    margin-right: 80px;
+    margin-right: 100px;
 }
 
-#navbar nav ul li a:hover {
+.navbar nav ul li a:hover {
     color: #ffffff; /* Changes link color on hover */
 }
 
-main {
-    flex: 1; /* Ensures main content fills remaining space */
-    padding: 20px; /* Adds padding to main content */
+/* Adjusted CSS for .black-background and .services_h1 */
+.black-background {
+    top: 0; /* Positions the black background at the top of the viewport */
+    left: 0; /* Ensures the black background starts from the left edge */
+    width: 100%; /* Spans the full width of the viewport */
+    height: 230px; /* Adjust the height of the black background as needed */
+    background-color: #000000f8; /* Sets the background color */
+    z-index: 998; /* Ensures the black background is below the navbar */
+
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.heading_tag {
+    color: #ffffff; /* Set text color to red */
+    font-weight: bold; /* Set font weight to bold */
+    font-size: 2.5rem; /* Adjust font size as needed */
+    margin-top: 80px;
 }
 
 .gallery {
     display: flex; /* Use flexbox for gallery layout */
     flex-wrap: wrap; /* Allows items to wrap onto new lines */
     gap: 20px; /* Adds space between items */
+    margin-top: 60px;
 }
 
 .gallery-item {
@@ -85,10 +137,21 @@ main {
     margin-left: 75px;
 }
 
+/* Ensure the map container can expand and be scrolled */
+#map-container {
+    height: 450px; /* Increase height as needed for better view */
+    width: 72%;
+    margin: 20px auto; /* Centers the container horizontally and adds space around it */
+    display: block; /* Ensures it's treated as a block element for margin auto */
+    box-sizing: border-box; /* Ensure padding/margin do not affect width/height */
+}
+
+
+
 footer {
     background: #000000;
     width: 100%; /* Full width of the viewport */
-    height: 105px; /* Adjust the height as per your design */
+    height: 85px; /* Adjust the height as per your design */
     display: flex;
     justify-content: space-between; /* Distribute content evenly */
     align-items: center; /* Center align items vertically */
@@ -96,14 +159,13 @@ footer {
     box-sizing: border-box; /* Ensures padding is included in the width */
 }
 
-.container {
+.container_footer {
     width: 100%; /* Ensures the container stretches across the viewport */
     display: flex; /* Use flexbox for layout */
     justify-content: space-between; /* Space items evenly */
     align-items: center; /* Center items vertically */
     color: transparent;
     background: linear-gradient(to right, #ffdc48, #ffeb95);
-    /* Clip background to text */
     -webkit-background-clip: text; background-clip: text;
 }
 
